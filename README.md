@@ -2,7 +2,7 @@
 
 Interactive Emacs Lisp pretty-printing
 
-`pretty.el` provides interactive functions to pretty-print the result of an expression and a global made `ipretty-mode` that advices `eval-print-last-sexp` to pretty print.
+`ipretty.el` provides interactive functions to pretty-print the result of an expression and a global made `ipretty-mode` that advices `eval-print-last-sexp` to pretty print.
 
 ## Installation
 
@@ -28,3 +28,7 @@ To make `eval-print-last-sexp` (bound to `C-j` in `lisp-interaction-mode`) prett
     M-x ipretty-mode
 
 Turning the mode off will remove the advice and `eval-print-last-sexp` will work normally again.
+
+## Screenshot
+
+![screen shot](https://raw.github.com/steckerhalter/ipretty/master/ipretty.png)
