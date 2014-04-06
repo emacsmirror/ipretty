@@ -18,14 +18,17 @@
 ;;; Code:
 
 ;;;###autoload
-(defun ipretty-last-sexp ()
-  "Pretty-print the last sexp into the current buffer."
-  (interactive)
-  (if (bound-and-true-p ipretty-mode)
-      (eval-print-last-sexp t)
-    (eval-print-last-sexp t)
-    (backward-sexp 1)
-    (indent-pp-sexp t)))
+(defun ipretty-last-sexp (&optional truncate)
+  "Pretty-print the last sexp into the current buffer.
+When TRUNCATE is non-nil or with a prefix argument, long output
+is truncated. See the documentation of `eval-print-last-sexp' for
+more information on what affects truncation."
+  (interactive "P")
+  (let ((standard-output (current-buffer)))
+    (terpri)
+    (eval-last-sexp (if truncate t 0)))
+  (backward-sexp 1)
+  (indent-pp-sexp t))
 
 ;;;###autoload
 (defun ipretty-last-sexp-other-buffer (&optional buffer-name)
@@ -33,7 +36,8 @@
 If BUFFER-NAME (a string)is provided it will be used to name the
 buffer, otherwise the default `*pp-display-expression*' is used."
   (interactive)
-  (pp-display-expression (eval (preceding-sexp)) (or buffer-name "*pp-display-expression*")))
+  (pp-display-expression
+   (eval (preceding-sexp)) (or buffer-name "*pp-display-expression*")))
 
 (defadvice eval-print-last-sexp (after eval-print-last-sexp-after-advice)
   "Advice `eval-print-last-sexp' to pretty-print the result."
@@ -51,7 +55,6 @@ buffer, otherwise the default `*pp-display-expression*' is used."
   (if ipretty-mode
       (ad-activate-regexp "eval-print-last-sexp-after-advice")
     (ad-deactivate-regexp "eval-print-last-sexp-after-advice")))
-
 
 (provide 'ipretty)
 ;;; ipretty.el ends here
