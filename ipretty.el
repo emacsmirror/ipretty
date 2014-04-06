@@ -52,4 +52,6 @@ buffer, otherwise the default `*pp-display-expression*' is used."
       (ad-activate-regexp "eval-print-last-sexp-after-advice")
     (ad-deactivate-regexp "eval-print-last-sexp-after-advice")))
 
+
+(provide 'ipretty)
 ;;; ipretty.el ends here
