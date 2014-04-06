@@ -16,6 +16,10 @@ Interactive Emacs Lisp pretty-printing
 (quelpa '(ipretty :fetcher github :repo "steckerhalter/ipretty"))
 ```
 
+### MELPA
+
+Packages are available in [MELPA](http://melpa.milkbox.net/).
+
 ## Usage
 
 Bind the functions to keys:
