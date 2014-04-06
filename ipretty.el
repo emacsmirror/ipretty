@@ -12,7 +12,7 @@
 ;;; Commentary:
 
 ;; `ipretty.el' provides interactive functions to pretty-print the
-;; result of an expression and a global made `ipretty-mode' that
+;; result of an expression and a global mode `ipretty-mode' that
 ;; advices `eval-print-last-sexp' to pretty print.
 
 ;;; Code:
