@@ -17,6 +17,8 @@
 
 ;;; Code:
 
+(require 'pp)
+
 ;;;###autoload
 (defun ipretty-last-sexp (&optional truncate)
   "Pretty-print the last sexp into the current buffer.
