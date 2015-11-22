@@ -18,7 +18,7 @@ Interactive Emacs Lisp pretty-printing
 
 ### MELPA
 
-Packages are available in [MELPA](http://melpa.milkbox.net/).
+Packages are available in [MELPA](https://melpa.org/).
 
 ## Usage
 
