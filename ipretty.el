@@ -3,9 +3,9 @@
 ;; Copyright (C) 2014, Steckerhalter
 
 ;; Author: steckerhalter
-;; URL: https://github.com/steckerhalter/ipretty
+;; URL: https://framagit.org/steckerhalter/ipretty
 ;; Keywords: pretty-print elisp buffer
-;; License: GPLv3, see https://github.com/ipretty/LICENSE
+;; License: GPLv3, see https://framagit.org/ipretty/LICENSE
 
 ;; This file is not part of GNU Emacs.
 

@@ -4,7 +4,7 @@ Interactive Emacs Lisp pretty-printing
 
 `ipretty.el` provides interactive functions to pretty-print the result of an expression and a global mode `ipretty-mode` that advices `eval-print-last-sexp` to pretty print.
 
-![screen shot](https://raw.github.com/steckerhalter/ipretty/master/ipretty.png)
+![screen shot](https://framagit.org/steckerhalter/ipretty/raw/master/ipretty.png)
 
 ## Installation
 
